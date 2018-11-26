@@ -1,0 +1,34 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Login
+{% endblock %}
+
+{% block content %}
+    {% if errorMessage is defined %}
+        <strong>{{ errorMessage }}</strong>
+    {% endif %}
+
+    <!--Login Box-->
+    <div class="card"  style="background-color:rgba(135,135,135)">
+    <br />
+    <style>
+        .container {
+            margin-top: 100px;
+        }
+    </style>
+    <div class ="container">
+        <div class = "jumbotron col-lg-4 mx-auto">
+            <form method="post">
+            <h4 align="Center">Login</h4><br />
+                <div class="form-group">
+                    <input type = "text" class="form-control" id="username" placeholder="Enter username">
+                </div>
+                <div class="form-group">
+                    <input type = "password" class="form-control" id="password" placeholder="Enter password">
+                </div>
+                <button type="submit" class="btn btn-primary form-control" onclick="loginAction();">Sign In</button>
+            </form>
+        </div>
+</div>
+{% endblock %}

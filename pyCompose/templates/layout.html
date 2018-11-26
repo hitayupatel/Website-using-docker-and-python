@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Template file-->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--imorting files locally -->
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet" type="text/css" >
+    <script src="../static/js/bootstrap.min.js"></script>
+    <style type="text/css">
+        .navbar-nav > li{
+            padding-left:30px;
+            padding-right:30px;
+        }
+        body {
+            background-color: rgb(135,135,135);
+        }
+    </style>
+    <title>{% block title %}{% endblock %} </title>
+</head>
+
+<body>
+    <!-- Navigation bar -->
+    <nav class = "navbar navbar-expand-md navbar-light bg-light sticky-top">
+    <div class = "container-fluid">
+        <img class="logo" src="../static/images/logo.png" style="width:50px; height:50px;">
+        <a class = "navbar-brand" href = "#"></a>
+        <button class = "navbar-toggler" type = "button" data-toggle = "collapse" data-target = "#navbarResponsive">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class = "collapse navbar-collapse" id = "navbarResponsive">
+            <ul class = "navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/about">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/register"> Register</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/game_release">Game Release</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/login">Login</a>
+            </li>
+            </ul>
+        </div>
+    </nav>
+    {% block content %} {% endblock %}
+    
+    {% extends 'footer.html' %}
+</body>
+
+</html>
